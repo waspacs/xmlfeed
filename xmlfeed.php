@@ -3,7 +3,6 @@
 $tumUrunlerDizi = json_decode (file_get_contents('./products.json'), true);				//products.json dosyasındaki ürünleri bir diziye aktar
 $xml_dosya = new SimpleXMLElement('<?xml version="1.0"?><products></products>');
 
-$cevirmeTur = 0;																		//Çevirme 
 
 foreach($tumUrunlerDizi as $tekUrun) {													//tumUrunlerDizi dizisindeki her bir ürün için
 	$urunBaslik = $xml_dosya->addChild("product");										//bir alt "başlık" oluştur
